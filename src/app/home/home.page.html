@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tracking Application</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h2>Position</h2>
+    <div>latitude:{{position[0]}},longitude:{{position[1]}} </div>
+
+    <ion-button (click)="SaveLocation()">
+      <ion-icon name="save"></ion-icon>Save Location
+    </ion-button>
+
+    <ion-list>
+      <ion-item *ngFor="let location of locations">{{position[0]}}:{{position[1]}}</ion-item>
+    </ion-list>
+    <ion-button (click)="clear()">
+      <ion-icon name="close"></ion-icon>Clear All
+    </ion-button>
+
+  </div>
+
+</ion-content>
